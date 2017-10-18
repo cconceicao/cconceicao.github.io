@@ -1,0 +1,278 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html,
+body {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	font-family: 'Titillium Web';
+	font-size: 16px;
+	font-weight: normal;
+	color: #333;
+}
+
+h1, h2, h3, h4, h5, h6, p, span, a, li, ul { margin-top: 0; }
+
+a {
+	color: #333;
+	text-decoration: none;
+}
+
+.link {
+	color: #333;
+	text-decoration: underline;
+}
+
+::-webkit-scrollbar { display: none; }
+
+::-moz-selection {
+	background: #FFEB3B;
+	color: #333;
+}
+
+::selection {
+	background: #FFEB3B;
+	color: #333;
+}
+
+ul, li { list-style: none; }
+
+.hide { display: none; }
+.hide-on-s { display: block; }
+
+header {
+	position: fixed;
+	width: 30%;
+	height: 100%;
+	background-color: #f7f7f7;
+}
+
+.header-content {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	padding: 50px;
+	padding-bottom: 0;
+}
+
+.logo {
+	position: relative;
+	overflow: hidden;
+	font-family: 'Roboto';
+	font-weight: 700;
+	font-size: 3.5vw;
+	line-height: 3.5vw;
+	margin-bottom: 10px;
+	color: #333;
+}
+
+.header-img {
+	width: 200px;
+	margin-bottom: 30px;
+}
+
+.header-role {
+	margin-bottom: 20px;
+	font-size: 20px;
+	font-weight: bold;
+}
+
+.header-social {
+	position: absolute;
+  bottom: 30px;
+}
+
+.header-social li {
+	display: inline-block;
+  margin-bottom: 15px;
+}
+
+.header-social a {
+	padding: 10px;
+	font-size: 18px;
+}
+
+.header-social a:first-of-type { padding-left: 0; }
+
+.header-social a:hover { color: #0366ff; }
+
+main {
+	float: right;
+	width: 70%;
+	height: 100%;
+	overflow-y: scroll;
+}
+
+.main-content {
+	padding: 50px;
+}
+
+.list {	margin-bottom: 60px; }
+
+.list:last-of-type {margin-bottom: 0; }
+
+.list-title {
+  padding-bottom: 5px;
+	color: #0366ff;
+	text-transform: uppercase;
+	font-size: 14px;
+	font-weight: 600; font-size: 14px;
+}
+
+.list-item {
+	padding: 15px 0;
+	border-top: 1px solid #dedede;
+	cursor: pointer;
+}
+
+.list-item a {
+	display: flex;
+	align-items: center;
+}
+
+.list-item:hover .item-title {
+	color: #0366ff;
+}
+
+.item-img {
+	width: 70px;
+	height: 70px;
+	margin-right: 30px;
+}
+
+.item-header { flex: 1; }
+
+.item-title {
+	font-family: 'Roboto';
+	font-weight: 500;
+	font-size: 22px;
+}
+
+.item-tech {
+	align-self: flex-end;
+	text-align: right;
+}
+
+#goTop {
+	opacity: 0;
+	position: fixed;
+	bottom: 42px;
+	right: 17px;
+	font-size: 18px;
+	transition: opacity 0.3s;
+	cursor: pointer;
+}
+
+#goTop:hover { color: #0366ff; }
+
+#goTop.is-active { opacity: 1; }
+
+
+@media screen and (max-width: 480px),
+screen and (max-width: 750px) and (orientation: landscape) {
+	.hide { display: block; }
+	.hide-on-s { display: none; }
+
+	header {
+		position: relative;
+		width: 100%;
+		height: 100%;
+		font-size: 18px;
+	}
+
+	.logo {
+		font-size: 15vw;
+   	line-height: 15vw;
+	}
+
+	.header-content { padding: 30px; }
+
+	.header-img {
+		width: 120px;
+		margin-bottom: 10px;
+	}
+
+	.header-social {
+    position: absolute;
+    bottom: 20px;
+    left: 30px;
+    right: 30px;
+		display: flex;
+		justify-content: space-between; 
+	}
+	
+	.header-social a {
+		font-size: 26px;
+		padding: 0;
+	}
+	
+	main {
+		float: none;
+		width: 100%;
+		height: auto;
+	}
+
+	.main-content { padding: 30px; }
+
+	.list-item a {
+		flex-wrap: wrap;
+		align-items: flex-start;
+	}
+
+	.item-title { font-size: 20px; }
+	.item-img {
+		width: 40px;
+		height: 40px;
+		margin-right: 15px;
+	}
+
+	.item-tech {
+		text-align: left;
+		padding-top: 15px;
+	}
+
+	#goTop {
+    right: 15px;
+    bottom: 15px;
+    font-size: 24px;
+	}
+}
+
+/* iPad - portrait */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : portrait) {
+	header {
+		position: relative;
+		width: 100%;
+		height: 370px;
+	}
+		
+	main {
+		float: none;
+		width: 100%;
+		height: auto;
+	}
+
+	.header-img {
+		width: 150px;
+		margin-bottom: 10px;
+	}
+}
+
+/* Mobile landscape*/
+@media screen and (max-width: 750px) and (orientation: landscape) {
+	.logo {
+		font-size: 8vw;
+		line-height: 8vw;
+		margin-bottom: 5px;
+	}
+
+	.header-img { width: 80px; }
+	
+	.header-role { margin-bottom: 10px; }
+}
